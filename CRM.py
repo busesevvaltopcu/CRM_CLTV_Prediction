@@ -110,10 +110,8 @@ cltv_df
 # CLTV değeri en yüksek 20 kişiyi gözlemleyiniz.
 cltv_df.sort_values("cltv",ascending=False)[:20]
 
-
 # CLTV'ye Göre Segmentlerin Oluşturulması
 # 6 aylık CLTV'ye göre tüm müşterilerinizi 4 gruba (segmente) ayırınız ve grup isimlerini veri setine ekleyiniz.
 # cltv_segment ismi ile atayınız.
 cltv_df['cltv_segment'] = pd.qcut(cltv_df['cltv'], 4, labels=['D', 'C', 'B', 'A'])
 cltv_df.head()
-
